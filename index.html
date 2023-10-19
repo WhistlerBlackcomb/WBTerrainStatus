@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(240, 240, 240); 
+        }   
+
+    </style>
+    <head>
+        <meta http-equiv="refresh" content="600">
+<!--The Meta Tag ^^ will allow an automatic refesh to the webpge, the 
+'content' is the time interval in which it reloads (I have it set 
+to 10 minutes currenly - 600 seconds)-->
+        <link rel="icon" type="image/jpg" href="images/WB Logo.jpg">
+        <title>Whistler Blackcomb Backcountry Access</title>        
+    </head>
+
+    <header style="background-color: rgb(0, 0, 0)">
+        <link rel="stylesheet" href="style.css">
+        <h1 style="color:whitesmoke" >Whistler Blackcomb Terrain Status Map</h1>
+        <p style="color:whitesmoke">This map is for users to access 
+            the status of Whistler Blackcomb terrain.</p>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap" rel="stylesheet">
+        <hr>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="https://www.whistlerblackcomb.com/the-mountain
+                    /mountain-conditions/snow-and-weather-report.aspx"> 
+                    WB Weather Report</a></li>
+                <li><a href="https://www.whistlerblackcomb.com/the-mountain/
+                    about-the-mountain/backcountry.aspx">
+                    WB Backcountry</a></li>
+                <li><a href="https://www.whistlerblackcomb.com/the-mountain/
+                    mountain-conditions/terrain-and-lift-status.aspx">
+                    Terrain & Lift Status</a></li>
+                <li><a href="https://www.avalanche.ca/map?lat=49.929724&lng=
+                    -122.710123">
+                    Avalanche Canada</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <main>
+
+        <style>
+            .embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} 
+            .embed-container iframe, .embed-container object, .embed-container 
+            iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} 
+            small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}
+        </style>
+        
+        <div class="embed-container">
+            <iframe width="500" 
+            height="400" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0" 
+            title="Whistler Blackcomb Terrain Status Map" 
+            src="https://wbmountain.maps.arcgis.com/apps/Embed/index.html?webmap=bd1550591af8424296ec0f88669715c6&extent=-123.0262,50.0273,-122.7726,50.1169&home=true&zoom=true&previewImage=false&scale=true&legend=true&disable_scroll=false&theme=dark">
+        </iframe></div>
+    </main>
+   
+<!--I took the code created from the 'classic or original map viewer'
+on arc online, then I pasted it to notepad, added the 'https:' before
+the hyperlink, then I opened it on chrome, before embedding it into
+this code on vscode-->  
+      
+</html>
