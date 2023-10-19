@@ -20,6 +20,7 @@ div{
 
 .navbar ul{
     list-style-type: none;
+    font-family: cambria, railway, barlow;
     text-align: center;
     padding: 0px;
     margin: 0px;
@@ -28,6 +29,7 @@ div{
 }
 .navbar a{
     color: whitesmoke;
+    font-family: cambria, railway, barlow;
     text-decoration: none;
     width: 150px;
     padding: 10px 10px;
