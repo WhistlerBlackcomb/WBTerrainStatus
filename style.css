@@ -1,0 +1,63 @@
+
+body{
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+h1{
+    position: static;
+    margin-top: 0%;
+    font-family: cambria, railway, barlow;
+    font-size: 32px;
+    text-align: center;
+    padding: 15px
+}
+p{
+    font-family: cambria, railway, barlow;
+    font-size: 17px;
+    text-align: center;
+}
+
+div{
+    float: center;
+}
+
+.navbar ul{
+    list-style-type: none;
+    font-family: cambria, railway, barlow;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 15px;
+}
+.navbar a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: cambria, railway, barlow;
+    width: 150px;
+    padding: 10px 10px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    color: rgb(226, 200, 192)
+}
+.navbar a:visited{
+    color: rgb(206, 37, 37);
+}
+.navbar li{
+    display: inline-block;
+    padding-right: 10px; 
+}
+
+@media screen and (max-width: 600px){
+    div, main, head{
+        width: 100%;
+    }
+}
