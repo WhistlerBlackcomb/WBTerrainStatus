@@ -42,7 +42,7 @@ div{
     font-family: cambria, railway, barlow;
     width: 200px;
     padding: 10px 10px;
-    display: block;
+    display: inline-block;
     text-align: center;
 }
 .navbar a:hover{
