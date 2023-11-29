@@ -19,7 +19,7 @@ h1{
 }
 p{
     font-family: cambria, railway, barlow;
-    font-size: 25px;
+    font-size: 17px;
     text-align: center;
 }
 
@@ -34,15 +34,15 @@ div{
     padding: 0px;
     margin: 0px;
     overflow: hidden;
-    font-size: 25px;
+    font-size: 15px;
 }
 .navbar a{
     color: whitesmoke;
     text-decoration: none;
     font-family: cambria, railway, barlow;
-    width: 200px;
+    width: 150px;
     padding: 10px 10px;
-    display: inline-block;
+    display: block;
     text-align: center;
 }
 .navbar a:hover{
