@@ -9,14 +9,42 @@
 
     </style>
     <head>
-        <meta http-equiv="refresh" content="900">
+        <meta http-equiv="refresh" content="600">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--The Meta Tag ^^ will allow an automatic refesh to the webpge, the 
 'content' is the time interval in which it reloads (I have it set 
-to 1 minutes currenly - 60 seconds)-->
-        <link rel="icon" type="image/jpg" href="WB Logo.jpg">
+to 10 minutes currenly - 600 seconds)-->
+        <link rel="icon" type="image/jpg" href="images/WB Logo.jpg">
         <title>Whistler Blackcomb Backcountry Access</title>        
     </head>
 
+    <header style="background-color: rgb(0, 0, 0)">
+        <link rel="stylesheet" href="style.css">
+        <h1 style="color:whitesmoke" >Whistler Blackcomb Terrain Status Map</h1>
+        <p style="color:whitesmoke">This map is for users to access 
+            the status of Whistler Blackcomb terrain.</p>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap" rel="stylesheet">
+        <hr>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="https://www.whistlerblackcomb.com/the-mountain
+                    /mountain-conditions/snow-and-weather-report.aspx"> 
+                    WB Weather Report</a></li>
+                <li><a href="https://www.whistlerblackcomb.com/the-mountain/
+                    about-the-mountain/backcountry.aspx">
+                    WB Backcountry</a></li>
+                <li><a href="https://www.whistlerblackcomb.com/the-mountain/
+                    mountain-conditions/terrain-and-lift-status.aspx">
+                    Terrain & Lift Status</a></li>
+                <li><a href="https://www.avalanche.ca/map?lat=49.929724&lng=
+                    -122.710123">
+                    Avalanche Canada</a></li>
+            </ul>
+        </nav>
+    </header>
         
     <main>
 
@@ -36,7 +64,7 @@ to 1 minutes currenly - 60 seconds)-->
             marginwidth="0" 
             title="Whistler Blackcomb Terrain Status Map" 
             src="https://wbmountain.maps.arcgis.com/apps/dashboards/4668002dc4944d4ca2cf1a7b3784602a">
-         </iframe></div>
+        </iframe></div>
     </main>
    
 <!--I took the code created from the 'classic or original map viewer'
