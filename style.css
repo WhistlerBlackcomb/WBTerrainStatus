@@ -138,6 +138,10 @@ p {
   margin: 6px 0;
 }
 
+.dropdown-toggle {
+  touch-action: manipulation;
+}
+
 /* hover state for each row */
 .dropdown-menu li:hover {
   background: rgba(255,255,255,0.03);
@@ -165,14 +169,6 @@ p {
 
     /* opacity only – NO movement */
     transition: opacity 0.2s ease;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .dropdown:hover .dropdown-menu {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
   }
 }
 
