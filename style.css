@@ -87,12 +87,10 @@ p {
 }
 
 /* show */
-.dropdown:hover .dropdown-menu,
 .dropdown.active .dropdown-menu {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
 }
 
 /* make every li a full-width row and white text */
@@ -165,6 +163,24 @@ p {
   .dropdown:hover .dropdown-menu,
   .dropdown.active .dropdown-menu {
     transform: translateX(-50%);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover behavior on touch devices */
+  .dropdown:hover .dropdown-menu {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 }
 
