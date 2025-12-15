@@ -97,19 +97,16 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const toggles = document.querySelectorAll(".dropdown-toggle");
-
-  toggles.forEach(toggle => {
+  document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
     toggle.addEventListener("click", e => {
       e.preventDefault();
-
       const dropdown = toggle.parentElement;
+
+      dropdown.classList.toggle("active");
 
       document.querySelectorAll(".dropdown").forEach(d => {
         if (d !== dropdown) d.classList.remove("active");
       });
-
-      dropdown.classList.toggle("active");
     });
   });
 
