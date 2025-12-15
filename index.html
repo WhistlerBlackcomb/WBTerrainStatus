@@ -44,7 +44,7 @@
         <!-- Legend Dropdown -->
         <!-- Dropdown -->
         <li class="dropdown">
-            <a href="#">Legend ▾</a>
+            <a href="#" class="dropdown-toggle">Legend ▾</a>
             <ul class="dropdown-menu">
                 <li><strong>Uphill Routes:</strong></li>
                 <li>Green: Open</li>
@@ -95,77 +95,29 @@
     </div>
 </main>
 
-<!-- Dropdown script -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdowns = document.querySelectorAll('.dropdown-toggle');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggles = document.querySelectorAll(".dropdown-toggle");
 
-    dropdowns.forEach(function(dropdown) {
-        dropdown.addEventListener('click', function(e) {
-            e.preventDefault();
-            const parent = this.parentElement;
-            parent.classList.toggle('active');
-        });
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+
+      const dropdown = toggle.parentElement;
+
+      document.querySelectorAll(".dropdown").forEach(d => {
+        if (d !== dropdown) d.classList.remove("active");
+      });
+
+      dropdown.classList.toggle("active");
     });
+  });
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-        dropdowns.forEach(function(dropdown) {
-            const parent = dropdown.parentElement;
-            if (!parent.contains(e.target)) {
-                parent.classList.remove('active');
-            }
-        });
-    });
-});
-</script>
-
-<script>
-document.querySelectorAll('.dropdown > a').forEach(trigger => {
-    trigger.addEventListener('click', function (e) {
-        e.preventDefault(); // stop link navigation
-
-        let dropdown = this.parentElement;
-
-        // Close any other open dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
-            if (d !== dropdown) d.classList.remove('active');
-        });
-
-        // Toggle the clicked dropdown
-        dropdown.classList.toggle('active');
-    });
-});
-
-// Close dropdowns when clicking outside
-document.addEventListener('click', function (e) {
-    if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
     }
-});
-</script>
-
-<script>
-    document.querySelectorAll('.dropdown > a').forEach(trigger => {
-    trigger.addEventListener('click', function (e) {
-        e.preventDefault(); 
-        let dropdown = this.parentElement;
-
-        // Toggle the clicked dropdown
-        dropdown.classList.toggle('active');
-
-        // Close other dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
-            if (d !== dropdown) d.classList.remove('active');
-        });
-    });
-});
-
-// Close dropdowns when clicking outside
-document.addEventListener('click', function (e) {
-    if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-    }
+  });
 });
 </script>
 
