@@ -97,36 +97,23 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const toggles = document.querySelectorAll(".dropdown-toggle");
+  const toggle = document.querySelector(".dropdown-toggle");
+  const dropdown = toggle.closest(".dropdown");
 
-  toggles.forEach(toggle => {
-    toggle.addEventListener("pointerdown", e => {
-      e.preventDefault();
-      e.stopPropagation();
+  toggle.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
 
-      const dropdown = toggle.closest(".dropdown");
-      const isOpen = dropdown.classList.contains("active");
-
-      // close all dropdowns
-      document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
-
-      // toggle current
-      if (!isOpen) dropdown.classList.add("active");
-    });
+    dropdown.classList.toggle("active");
   });
 
-  // close when tapping outside
-  document.addEventListener("pointerdown", e => {
-    document.querySelectorAll(".dropdown").forEach(dropdown => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove("active");
-      }
-    });
+  document.addEventListener("click", e => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("active");
+    }
   });
 });
 </script>
 
 </body>
 </html>
-
-
