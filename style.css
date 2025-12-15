@@ -144,11 +144,13 @@ p {
   .dropdown-menu {
     position: fixed;
     top: 140px;
-    left: 50%;
 
-    transform: translateX(-50%);
-    max-width: calc(100vw - 32px);
-    min-width: 260px;
+    left: 16px;
+    right: 16px;
+    margin: 0 auto;
+
+    width: auto;
+    max-width: 360px;
 
     background: #131313;
     border-radius: 10px;
@@ -156,18 +158,12 @@ p {
 
     z-index: 3000;
 
-    /* no transform animation on mobile */
+    /* opacity only – NO movement */
     transition: opacity 0.2s ease;
-  }
-
-  .dropdown:hover .dropdown-menu,
-  .dropdown.active .dropdown-menu {
-    transform: translateX(-50%);
   }
 }
 
 @media (hover: none) and (pointer: coarse) {
-  /* Disable hover behavior on touch devices */
   .dropdown:hover .dropdown-menu {
     visibility: hidden;
     opacity: 0;
