@@ -7,6 +7,10 @@ body, html {
     background-color: #f4f4f4;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -91,6 +95,7 @@ p {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+  display: block;
 }
 
 /* make every li a full-width row and white text */
