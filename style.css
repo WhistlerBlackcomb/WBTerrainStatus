@@ -143,13 +143,18 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: max-content;
-    min-width: 260px;
 
+    width: max-content;
+    max-width: calc(100vw - 24px); /* keep inside screen */
+    box-sizing: border-box;
+
+    padding: 10px;
     margin-top: 8px;
+
     background: #131313;
     border-radius: 10px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    overflow-wrap: break-word;
   }
 }
 
@@ -165,3 +170,4 @@ p {
     height: 100%;
     border: 0;
 }
+
