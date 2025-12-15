@@ -90,6 +90,22 @@ p {
   box-sizing: border-box;
 }
 
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  color: #e2c8c0;
+  background-color: #222;
+}
+
 /* show */
 .dropdown.active .dropdown-menu {
   visibility: visible;
