@@ -101,23 +101,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggles.forEach(toggle => {
     toggle.addEventListener("click", e => {
-      e.preventDefault();        // ← REQUIRED for mobile
-      e.stopPropagation();       // ← prevents instant close
+      e.preventDefault();
+      e.stopPropagation();
 
       const dropdown = toggle.closest(".dropdown");
-      dropdown.classList.toggle("active");
+      const isOpen = dropdown.classList.contains("active");
 
-      document.querySelectorAll(".dropdown").forEach(d => {
-        if (d !== dropdown) d.classList.remove("active");
-      });
+      // close all
+      document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
+
+      // toggle current
+      if (!isOpen) dropdown.classList.add("active");
     });
   });
 
-  document.addEventListener("click", () => {
-    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
+  // close ONLY when tapping outside the dropdown
+  document.addEventListener("click", e => {
+    document.querySelectorAll(".dropdown").forEach(dropdown => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("active");
+      }
+    });
   });
 });
 </script>
 
 </body>
 </html>
+
