@@ -139,35 +139,18 @@ p {
 
 /* mobile: make dropdown panel relative and full-width stacked */
 @media (max-width: 768px) {
-  .dropdown-menu {
-    position: relative;
-    width: 100%;
-    margin-top: 6px;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-    box-shadow: none;
-    background: #131313;
+  .navbar li {
+    display: inline-block;
   }
 
-  .navbar ul { padding-bottom: 8px; } /* small breathing room */
-}
-
-/* ---------------- MOBILE ---------------- */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: relative;
-        width: 100%;
-        margin-top: 6px;
-
-        background: #1b1b1b;
-        border-radius: 8px;
-        box-shadow: none;
-
-        opacity: 1;
-        pointer-events: auto;
-        transform: none;
-    }
+  .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 6px;
+    background: #131313;
+  }
 }
 
 
