@@ -44,7 +44,7 @@
         <!-- Legend Dropdown -->
         <!-- Dropdown -->
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Legend ▾</a>
+            <a href="#" class="dropdown-toggle" role="button">Legend ▾</a>
             <ul class="dropdown-menu">
                 <li><strong>Uphill Routes:</strong></li>
                 <li>Green: Open</li>
@@ -97,11 +97,14 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
-    toggle.addEventListener("click", e => {
-      e.preventDefault();
-      const dropdown = toggle.parentElement;
+  const toggles = document.querySelectorAll(".dropdown-toggle");
 
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", e => {
+      e.preventDefault();        // ← REQUIRED for mobile
+      e.stopPropagation();       // ← prevents instant close
+
+      const dropdown = toggle.closest(".dropdown");
       dropdown.classList.toggle("active");
 
       document.querySelectorAll(".dropdown").forEach(d => {
@@ -110,10 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  document.addEventListener("click", e => {
-    if (!e.target.closest(".dropdown")) {
-      document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
-    }
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
   });
 });
 </script>
